@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- 사람의 머리 -->
+    <path
+        android:fillColor="#A0A0A0"
+        android:pathData="M12,2C10.34,2 9,3.34 9,5C9,6.66 10.34,8 12,8C13.66,8 15,6.66 15,5C15,3.34 13.66,2 12,2Z" />
+
+    <!-- 사람의 몸통 -->
+    <path
+        android:fillColor="#A0A0A0"
+        android:pathData="M16,9H8C6.9,9 6,9.9 6,11V17C6,18.1 6.9,19 8,19H16C17.1,19 18,18.1 18,17V11C18,9.9 17.1,9 16,9Z" />
+
+</vector>
