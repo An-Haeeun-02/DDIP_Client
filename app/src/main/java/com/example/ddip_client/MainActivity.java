@@ -1,6 +1,7 @@
 package com.example.ddip_client;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuInflater;
@@ -46,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
         homeButton.setOnClickListener(v -> Toast.makeText(this, "홈 버튼 클릭됨", Toast.LENGTH_SHORT).show());
         calendarButton.setOnClickListener(v -> Toast.makeText(this, "캘린더 버튼 클릭됨", Toast.LENGTH_SHORT).show());
         crewRoomButton.setOnClickListener(v -> Toast.makeText(this, "크루룸 버튼 클릭됨", Toast.LENGTH_SHORT).show());
-        myPageButton.setOnClickListener(v -> Toast.makeText(this, "마이페이지 버튼 클릭됨", Toast.LENGTH_SHORT).show());
+        myPageButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, LoginSignupActivity.class);
+            startActivity(intent);
+        });
 
         // ------------------ Add Work (근무지 추가) ------------------
         Button addWorkButton = findViewById(R.id.add_work_button);

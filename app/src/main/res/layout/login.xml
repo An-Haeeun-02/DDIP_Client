@@ -20,10 +20,10 @@
 
     <!-- 이메일 입력 필드 -->
     <EditText
-        android:id="@+id/email_input"
+        android:id="@+id/id_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="이메일"
+        android:hint="아이디"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:background="@android:color/white"
