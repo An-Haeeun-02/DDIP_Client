@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -48,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         calendarButton.setOnClickListener(v -> Toast.makeText(this, "캘린더 버튼 클릭됨", Toast.LENGTH_SHORT).show());
         crewRoomButton.setOnClickListener(v -> Toast.makeText(this, "크루룸 버튼 클릭됨", Toast.LENGTH_SHORT).show());
         myPageButton.setOnClickListener(v -> {
-            Intent intent = new Intent(this, LoginSignupActivity.class);
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
 

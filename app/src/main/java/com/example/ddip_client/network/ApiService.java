@@ -8,11 +8,8 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface ApiService {
-    @POST("users/register")
-    Call<ddip_db> register1(@Body ddip_db ddip_db);
-
-    @POST("users/register")
-    Call<ddip_db> register2(@Body String userid, String userpwd, String username, String email, boolean admin);
+    @POST("users/signup")
+    Call<ddip_db> signup(@Body ddip_db ddip_db);
 
     @POST("users/login")
     Call<ddip_db> login(@Query("userid") String userid, @Query("userpwd") String userpwd);

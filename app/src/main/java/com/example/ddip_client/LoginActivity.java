@@ -18,7 +18,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LoginSignupActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText idInput;
     private EditText passwordInput;
@@ -47,7 +47,7 @@ public class LoginSignupActivity extends AppCompatActivity {
                 loginUser(inputID, inputPW);
 
                 if(res == 1){
-                    Intent intent = new Intent(LoginSignupActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                 }else{
                     idInput.setText("");
@@ -60,27 +60,8 @@ public class LoginSignupActivity extends AppCompatActivity {
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = idInput.getText().toString().trim();
-                String password = passwordInput.getText().toString().trim();
-
-                // 이메일 입력 여부 확인
-                if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(LoginSignupActivity.this, "이메일을 입력하세요", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                // 비밀번호 입력 여부 확인
-                if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(LoginSignupActivity.this, "비밀번호를 입력하세요", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                // 더미 회원가입 로직 (실제 등록 로직으로 대체 필요)
-                Toast.makeText(LoginSignupActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
-                // 회원가입 성공 후 메인 액티비티로 이동
-                Intent intent = new Intent(LoginSignupActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -93,18 +74,18 @@ public class LoginSignupActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ddip_db> call, Response<ddip_db> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(LoginSignupActivity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
                     res = 1;
 
                 }else{
-                    Toast.makeText(LoginSignupActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
                     res = 0;
                 }
             }
 
             @Override
             public void onFailure(Call<ddip_db> call, Throwable t) {
-                Toast.makeText(LoginSignupActivity.this, "Error: "+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Error: "+t.getMessage(), Toast.LENGTH_SHORT).show();
                 res = -1;
                 Log.e("LoginActivity", t.getMessage());
             }
