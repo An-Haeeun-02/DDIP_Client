@@ -14,15 +14,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DDIP_Client"
         tools:targetApi="31">
+
+        <!-- LoginSignupActivity를 첫 화면으로 설정 -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginSignupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- SignupActivity 등록 -->
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true"/>
+
+        <!-- MainActivity 등록 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"/>
+
+        <!-- CrewRoomActivity 등록 -->
+        <activity
+            android:name=".CrewRoomActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddWorkActivity"
+            android:exported="true"/>
+
     </application>
 
 </manifest>
