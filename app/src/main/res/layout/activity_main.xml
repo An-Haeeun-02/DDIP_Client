@@ -174,7 +174,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/ic_calendar"
-            android:contentDescription="달력"
+            android:contentDescription="크루룸으로 이동"
             android:background="?android:attr/selectableItemBackgroundBorderless" />
 
         <ImageButton
