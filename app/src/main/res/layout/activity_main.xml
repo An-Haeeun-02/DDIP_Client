@@ -169,25 +169,25 @@
             android:background="?android:attr/selectableItemBackgroundBorderless" />
 
         <ImageButton
-            android:id="@+id/calendar_button"
+            android:id="@+id/sub_crew_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_calendar"
+            android:src="@drawable/ic_subcrew"
             android:contentDescription="크루룸으로 이동"
             android:background="?android:attr/selectableItemBackgroundBorderless" />
 
         <ImageButton
-            android:id="@+id/crew_room_button"
+            android:id="@+id/alarm_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_crew"
-            android:contentDescription="크루룸"
+            android:src="@drawable/ic_alarm"
+            android:contentDescription="알람"
             android:background="?android:attr/selectableItemBackgroundBorderless" />
 
         <ImageButton
-            android:id="@+id/mypage_button"
+            android:id="@+id/my_page_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

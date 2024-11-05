@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); // main.xml로 변경했습니다.
 
         // ------------------ Header (상단바) ------------------
         TextView titleTextView = findViewById(R.id.title_text);
@@ -40,21 +40,26 @@ public class MainActivity extends AppCompatActivity {
 
         // ------------------ Bottom Navigation (하단바) ------------------
         ImageButton homeButton = findViewById(R.id.home_button);
-        ImageButton calendarButton = findViewById(R.id.calendar_button);
-        ImageButton crewRoomButton = findViewById(R.id.crew_room_button);
-        ImageButton myPageButton = findViewById(R.id.mypage_button);
+        ImageButton subCrewButton = findViewById(R.id.sub_crew_button);
+        ImageButton alarmButton = findViewById(R.id.alarm_button);
+        ImageButton myPageButton = findViewById(R.id.my_page_button);
 
         homeButton.setOnClickListener(v -> Toast.makeText(this, "홈 버튼 클릭됨", Toast.LENGTH_SHORT).show());
-        calendarButton.setOnClickListener(v -> {
+        subCrewButton.setOnClickListener(v -> {
             Toast.makeText(this, "크루룸 버튼 클릭됨", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, CrewRoomActivity.class);
             startActivity(intent);
         });
+        alarmButton.setOnClickListener(v -> Toast.makeText(this, "알람 버튼 클릭됨", Toast.LENGTH_SHORT).show());
         myPageButton.setOnClickListener(v -> Toast.makeText(this, "마이페이지 버튼 클릭됨", Toast.LENGTH_SHORT).show());
 
         // ------------------ Add Work (근무지 추가) ------------------
         Button addWorkButton = findViewById(R.id.add_work_button);
-        addWorkButton.setOnClickListener(v -> Toast.makeText(this, "근무지 추가 클릭됨", Toast.LENGTH_SHORT).show());
+        addWorkButton.setOnClickListener(v -> {
+            Toast.makeText(this, "근무지 추가 클릭됨", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, AddWorkActivity.class);
+            startActivity(intent);
+        });
 
         // ------------------ Memo (메모) ------------------
         memoInput = findViewById(R.id.memo_input);
